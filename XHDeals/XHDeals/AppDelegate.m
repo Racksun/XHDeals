@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NaviC.h"
+#import "XHHomeCVC.h"
+#import "TestVCViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[NaviC alloc] initWithRootViewController:[[XHHomeCVC alloc] init]];
+
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
