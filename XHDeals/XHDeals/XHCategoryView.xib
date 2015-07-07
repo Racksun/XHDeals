@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XHCategoryView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RNn-CL-SXM" userLabel="mainTable">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="480"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="YQc-6R-9I2"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="VAO-7H-eZK"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-5r-E6Z" userLabel="secondTable">
+                    <rect key="frame" x="150" y="0.0" width="150" height="480"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="1Li-cZ-XBu"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="2QU-R1-mfM"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ekb-5r-E6Z" secondAttribute="bottom" id="3bl-hv-pEO"/>
+                <constraint firstItem="ekb-5r-E6Z" firstAttribute="width" secondItem="RNn-CL-SXM" secondAttribute="width" id="8sj-mp-wNd"/>
+                <constraint firstItem="RNn-CL-SXM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Icn-OY-WQB"/>
+                <constraint firstItem="RNn-CL-SXM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Q0S-n2-HhY"/>
+                <constraint firstItem="ekb-5r-E6Z" firstAttribute="leading" secondItem="RNn-CL-SXM" secondAttribute="trailing" id="SiD-f0-TsQ"/>
+                <constraint firstAttribute="bottom" secondItem="RNn-CL-SXM" secondAttribute="bottom" id="lg0-CM-V7G"/>
+                <constraint firstItem="ekb-5r-E6Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qDf-NH-EuU"/>
+                <constraint firstAttribute="trailing" secondItem="ekb-5r-E6Z" secondAttribute="trailing" id="yjk-Nb-aFK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="RNn-CL-SXM" id="Lrz-91-dt6"/>
+                <outlet property="secondTableView" destination="ekb-5r-E6Z" id="Qnk-Te-pe3"/>
+            </connections>
+        </view>
+    </objects>
+</document>

@@ -8,12 +8,22 @@
 
 #import "XHHomeCVC.h"
 #import "XHNaviItemView.h"
+#import "XHCategoryController.h"
 
 @interface XHHomeCVC ()
-
+//弹出控制器
+@property (nonatomic, strong) UIPopoverController *categoryPopover;
 @end
 
 @implementation XHHomeCVC
+
+-(UIPopoverController *)categoryPopover{
+    if (!_categoryPopover) {
+        XHCategoryController *categoryViewController = [[XHCategoryController alloc] init];
+        self.categoryPopover = [[UIPopoverController alloc] initWithContentViewController:categoryViewController];
+    }
+    return _categoryPopover;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -94,9 +104,11 @@
 }
 
 -(void)clickSearch{
+    
 
 }
 -(void)clickCategory{
+    [self.categoryPopover presentPopoverFromBarButtonItem:self.navigationItem.leftBarButtonItems[1] permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 
 }
 

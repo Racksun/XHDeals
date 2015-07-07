@@ -19,6 +19,16 @@
 		A35E2B511B4AAC7E0064E96C /* XHHomeCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E2B501B4AAC7E0064E96C /* XHHomeCVC.m */; };
 		A3E6ACFC1B4B8BB500D5C5A5 /* XHNaviItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6ACFB1B4B8BB500D5C5A5 /* XHNaviItemView.m */; };
 		A3E6ACFE1B4B8C3400D5C5A5 /* XHNaviItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6ACFD1B4B8C3400D5C5A5 /* XHNaviItemView.xib */; };
+		A3E6AD011B4BCE6700D5C5A5 /* XHCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6AD001B4BCE6700D5C5A5 /* XHCategoryView.m */; };
+		A3E6AD031B4BCED500D5C5A5 /* XHCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6AD021B4BCED500D5C5A5 /* XHCategoryView.xib */; };
+		A3E6AD081B4BF00200D5C5A5 /* XHCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6AD071B4BF00200D5C5A5 /* XHCategoryController.m */; };
+		A3E6AD0E1B4BF29E00D5C5A5 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6AD0D1B4BF29E00D5C5A5 /* CategoryModel.m */; };
+		A3E6AD121B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6AD111B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.m */; };
+		A3E6AD161B4BFDCC00D5C5A5 /* XHMetaDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6AD151B4BFDCC00D5C5A5 /* XHMetaDataTool.m */; };
+		A3E6AD201B4C075E00D5C5A5 /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3E6AD1C1B4C075E00D5C5A5 /* categories.plist */; };
+		A3E6AD211B4C075E00D5C5A5 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3E6AD1D1B4C075E00D5C5A5 /* cities.plist */; };
+		A3E6AD221B4C075E00D5C5A5 /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3E6AD1E1B4C075E00D5C5A5 /* cityGroups.plist */; };
+		A3E6AD231B4C075E00D5C5A5 /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3E6AD1F1B4C075E00D5C5A5 /* sorts.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +64,21 @@
 		A3E6ACFA1B4B8BB500D5C5A5 /* XHNaviItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNaviItemView.h; sourceTree = "<group>"; };
 		A3E6ACFB1B4B8BB500D5C5A5 /* XHNaviItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNaviItemView.m; sourceTree = "<group>"; };
 		A3E6ACFD1B4B8C3400D5C5A5 /* XHNaviItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XHNaviItemView.xib; sourceTree = "<group>"; };
+		A3E6ACFF1B4BCE6700D5C5A5 /* XHCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCategoryView.h; sourceTree = "<group>"; };
+		A3E6AD001B4BCE6700D5C5A5 /* XHCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCategoryView.m; sourceTree = "<group>"; };
+		A3E6AD021B4BCED500D5C5A5 /* XHCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XHCategoryView.xib; sourceTree = "<group>"; };
+		A3E6AD061B4BF00200D5C5A5 /* XHCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCategoryController.h; sourceTree = "<group>"; };
+		A3E6AD071B4BF00200D5C5A5 /* XHCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCategoryController.m; sourceTree = "<group>"; };
+		A3E6AD0C1B4BF29E00D5C5A5 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		A3E6AD0D1B4BF29E00D5C5A5 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		A3E6AD101B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XHDataParseTool.h"; sourceTree = "<group>"; };
+		A3E6AD111B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XHDataParseTool.m"; sourceTree = "<group>"; };
+		A3E6AD141B4BFDCC00D5C5A5 /* XHMetaDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMetaDataTool.h; sourceTree = "<group>"; };
+		A3E6AD151B4BFDCC00D5C5A5 /* XHMetaDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMetaDataTool.m; sourceTree = "<group>"; };
+		A3E6AD1C1B4C075E00D5C5A5 /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		A3E6AD1D1B4C075E00D5C5A5 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		A3E6AD1E1B4C075E00D5C5A5 /* cityGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityGroups.plist; sourceTree = "<group>"; };
+		A3E6AD1F1B4C075E00D5C5A5 /* sorts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sorts.plist; sourceTree = "<group>"; };
 		B972E70A2B5A6005BFC4888D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +141,8 @@
 		A35E2B181B4AA1140064E96C /* XHDeals */ = {
 			isa = PBXGroup;
 			children = (
+				A3E6AD0F1B4BF5E900D5C5A5 /* Tool */,
+				A3E6AD0B1B4BF25F00D5C5A5 /* Modle */,
 				A3E6ACF91B4B8B3100D5C5A5 /* View */,
 				A35E2B3F1B4AA5560064E96C /* Controller */,
 				A35E2B1D1B4AA1140064E96C /* AppDelegate.h */,
@@ -131,6 +158,7 @@
 		A35E2B191B4AA1140064E96C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3E6AD171B4C071F00D5C5A5 /* plist */,
 				A35E2B1A1B4AA1140064E96C /* Info.plist */,
 				A35E2B1B1B4AA1140064E96C /* main.m */,
 			);
@@ -157,8 +185,8 @@
 		A35E2B3F1B4AA5560064E96C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A35E2B401B4AA5830064E96C /* NaviC.h */,
-				A35E2B411B4AA5830064E96C /* NaviC.m */,
+				A3E6AD051B4BEFBB00D5C5A5 /* Category */,
+				A3E6AD041B4BEF9A00D5C5A5 /* MainNav */,
 				A35E2B4C1B4AABD00064E96C /* XHDealsCVC.h */,
 				A35E2B4D1B4AABD00064E96C /* XHDealsCVC.m */,
 				A35E2B4F1B4AAC7E0064E96C /* XHHomeCVC.h */,
@@ -173,8 +201,68 @@
 				A3E6ACFA1B4B8BB500D5C5A5 /* XHNaviItemView.h */,
 				A3E6ACFB1B4B8BB500D5C5A5 /* XHNaviItemView.m */,
 				A3E6ACFD1B4B8C3400D5C5A5 /* XHNaviItemView.xib */,
+				A3E6ACFF1B4BCE6700D5C5A5 /* XHCategoryView.h */,
+				A3E6AD001B4BCE6700D5C5A5 /* XHCategoryView.m */,
+				A3E6AD021B4BCED500D5C5A5 /* XHCategoryView.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A3E6AD041B4BEF9A00D5C5A5 /* MainNav */ = {
+			isa = PBXGroup;
+			children = (
+				A35E2B401B4AA5830064E96C /* NaviC.h */,
+				A35E2B411B4AA5830064E96C /* NaviC.m */,
+			);
+			name = MainNav;
+			sourceTree = "<group>";
+		};
+		A3E6AD051B4BEFBB00D5C5A5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6AD061B4BF00200D5C5A5 /* XHCategoryController.h */,
+				A3E6AD071B4BF00200D5C5A5 /* XHCategoryController.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		A3E6AD0B1B4BF25F00D5C5A5 /* Modle */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6AD0C1B4BF29E00D5C5A5 /* CategoryModel.h */,
+				A3E6AD0D1B4BF29E00D5C5A5 /* CategoryModel.m */,
+			);
+			name = Modle;
+			sourceTree = "<group>";
+		};
+		A3E6AD0F1B4BF5E900D5C5A5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6AD131B4BFD9D00D5C5A5 /* MetaDataTool */,
+				A3E6AD101B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.h */,
+				A3E6AD111B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		A3E6AD131B4BFD9D00D5C5A5 /* MetaDataTool */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6AD141B4BFDCC00D5C5A5 /* XHMetaDataTool.h */,
+				A3E6AD151B4BFDCC00D5C5A5 /* XHMetaDataTool.m */,
+			);
+			name = MetaDataTool;
+			sourceTree = "<group>";
+		};
+		A3E6AD171B4C071F00D5C5A5 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				A3E6AD1C1B4C075E00D5C5A5 /* categories.plist */,
+				A3E6AD1D1B4C075E00D5C5A5 /* cities.plist */,
+				A3E6AD1E1B4C075E00D5C5A5 /* cityGroups.plist */,
+				A3E6AD1F1B4C075E00D5C5A5 /* sorts.plist */,
+			);
+			name = plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +347,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E6AD031B4BCED500D5C5A5 /* XHCategoryView.xib in Resources */,
+				A3E6AD211B4C075E00D5C5A5 /* cities.plist in Resources */,
 				A35E2B481B4AA7850064E96C /* Images.xcassets in Resources */,
+				A3E6AD221B4C075E00D5C5A5 /* cityGroups.plist in Resources */,
+				A3E6AD201B4C075E00D5C5A5 /* categories.plist in Resources */,
 				A35E2B251B4AA1140064E96C /* Main.storyboard in Resources */,
+				A3E6AD231B4C075E00D5C5A5 /* sorts.plist in Resources */,
 				A35E2B2A1B4AA1140064E96C /* LaunchScreen.xib in Resources */,
 				A3E6ACFE1B4B8C3400D5C5A5 /* XHNaviItemView.xib in Resources */,
 			);
@@ -313,8 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E6AD011B4BCE6700D5C5A5 /* XHCategoryView.m in Sources */,
 				A35E2B4E1B4AABD00064E96C /* XHDealsCVC.m in Sources */,
 				A3E6ACFC1B4B8BB500D5C5A5 /* XHNaviItemView.m in Sources */,
+				A3E6AD161B4BFDCC00D5C5A5 /* XHMetaDataTool.m in Sources */,
+				A3E6AD081B4BF00200D5C5A5 /* XHCategoryController.m in Sources */,
+				A3E6AD0E1B4BF29E00D5C5A5 /* CategoryModel.m in Sources */,
+				A3E6AD121B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.m in Sources */,
 				A35E2B1F1B4AA1140064E96C /* AppDelegate.m in Sources */,
 				A35E2B511B4AAC7E0064E96C /* XHHomeCVC.m in Sources */,
 				A35E2B1C1B4AA1140064E96C /* main.m in Sources */,
