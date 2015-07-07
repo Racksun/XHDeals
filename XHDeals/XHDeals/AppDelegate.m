@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "NaviC.h"
 #import "XHHomeCVC.h"
-#import "TestVCViewController.h"
+
 @interface AppDelegate ()
 
 @end
