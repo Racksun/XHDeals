@@ -9,5 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface XHMetaDataTool : NSObject
+//返回所有城市
++(NSArray *)citys;
+
+//返回分组
 +(NSArray *)categories;
+
+//返回城市组
++(NSArray *)cityGroups;
++(NSArray *)regionsByCityName:(NSString *)cityName;
+
 @end

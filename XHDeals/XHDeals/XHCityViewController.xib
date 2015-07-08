@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XHCityViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIx-iX-GR1" userLabel="导航栏View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_navigationBar_normal" translatesAutoresizingMaskIntoConstraints="NO" id="w50-9I-6QJ">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="切换城市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-Fq-hOh">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbF-uo-rpT">
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="62" id="wm7-ea-6n9"/>
+                            </constraints>
+                            <state key="normal" image="btn_navigation_close">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clickClose:" destination="-1" eventType="touchUpInside" id="dW9-yf-oQu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="w50-9I-6QJ" firstAttribute="leading" secondItem="vIx-iX-GR1" secondAttribute="leading" id="1fa-Ff-8j7"/>
+                        <constraint firstAttribute="trailing" secondItem="w50-9I-6QJ" secondAttribute="trailing" id="5tc-WT-iVk"/>
+                        <constraint firstAttribute="bottom" secondItem="IbF-uo-rpT" secondAttribute="bottom" id="77f-hq-BzD"/>
+                        <constraint firstAttribute="height" constant="62" id="Q4z-QS-p3c"/>
+                        <constraint firstItem="w50-9I-6QJ" firstAttribute="top" secondItem="vIx-iX-GR1" secondAttribute="top" id="UML-VA-5FA"/>
+                        <constraint firstAttribute="bottom" secondItem="R5W-Fq-hOh" secondAttribute="bottom" id="cm9-um-RBe"/>
+                        <constraint firstItem="R5W-Fq-hOh" firstAttribute="leading" secondItem="vIx-iX-GR1" secondAttribute="leading" id="eaE-sL-Ql3"/>
+                        <constraint firstAttribute="bottom" secondItem="w50-9I-6QJ" secondAttribute="bottom" id="gkl-hJ-td0"/>
+                        <constraint firstItem="R5W-Fq-hOh" firstAttribute="top" secondItem="vIx-iX-GR1" secondAttribute="top" id="gxy-om-aFw"/>
+                        <constraint firstItem="IbF-uo-rpT" firstAttribute="top" secondItem="vIx-iX-GR1" secondAttribute="top" id="kPC-pu-Qvx"/>
+                        <constraint firstAttribute="trailing" secondItem="R5W-Fq-hOh" secondAttribute="trailing" id="uuL-k1-C6P"/>
+                        <constraint firstItem="IbF-uo-rpT" firstAttribute="leading" secondItem="vIx-iX-GR1" secondAttribute="leading" id="yw6-PQ-sdz"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="UxY-9f-cXg">
+                    <rect key="frame" x="0.0" y="62" width="320" height="506"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="55t-RQ-WUX"/>
+                        <outlet property="delegate" destination="-1" id="iYo-7K-aUC"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vIx-iX-GR1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7Mt-41-Kzi"/>
+                <constraint firstAttribute="trailing" secondItem="UxY-9f-cXg" secondAttribute="trailing" id="BU9-FR-1Mi"/>
+                <constraint firstItem="vIx-iX-GR1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="L19-JH-CMm"/>
+                <constraint firstItem="UxY-9f-cXg" firstAttribute="top" secondItem="vIx-iX-GR1" secondAttribute="bottom" id="OBZ-po-Vov"/>
+                <constraint firstAttribute="bottom" secondItem="UxY-9f-cXg" secondAttribute="bottom" id="XMl-Uz-pZw"/>
+                <constraint firstAttribute="trailing" secondItem="vIx-iX-GR1" secondAttribute="trailing" id="dnb-cW-eYp"/>
+                <constraint firstItem="UxY-9f-cXg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kKl-nM-1eO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_navigationBar_normal" width="124" height="124"/>
+        <image name="btn_navigation_close" width="30" height="30"/>
+    </resources>
+</document>

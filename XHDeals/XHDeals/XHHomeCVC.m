@@ -9,10 +9,12 @@
 #import "XHHomeCVC.h"
 #import "XHNaviItemView.h"
 #import "XHCategoryController.h"
+#import "XHRegionViewController.h"
 
 @interface XHHomeCVC ()
 //弹出控制器
 @property (nonatomic, strong) UIPopoverController *categoryPopover;
+@property (nonatomic, strong) UIPopoverController *districtPopover;
 @end
 
 @implementation XHHomeCVC
@@ -23,6 +25,14 @@
         self.categoryPopover = [[UIPopoverController alloc] initWithContentViewController:categoryViewController];
     }
     return _categoryPopover;
+}
+
+-(UIPopoverController *)districtPopover{
+    if (!_districtPopover) {
+        XHRegionViewController *regionViewController = [[XHRegionViewController alloc] init];
+        _districtPopover = [[UIPopoverController alloc] initWithContentViewController:regionViewController];
+    }
+    return _districtPopover;
 }
 
 - (void)viewDidLoad {
@@ -83,7 +93,7 @@
     districtItemView.title = @"深圳 － 全部";
     districtItemView.subtitle = @"全部";
     [districtItemView setIcon:@"icon_district" highIcon:@"icon_district_highlighted"];
-    [categoryItemView addTarget:self action:@selector(clickDistrict)];
+    [districtItemView addTarget:self action:@selector(clickDistrict)];
     UIBarButtonItem *districtItem = [[UIBarButtonItem alloc] initWithCustomView:districtItemView];
     
     //sort
@@ -113,7 +123,7 @@
 }
 
 -(void)clickDistrict{
-
+    [self.districtPopover presentPopoverFromBarButtonItem:self.navigationItem.leftBarButtonItems[2] permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 -(void)clickSort{
