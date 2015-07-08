@@ -10,14 +10,31 @@
 #import "XHNaviItemView.h"
 #import "XHCategoryController.h"
 #import "XHRegionViewController.h"
+#import "XHSortViewController.h"
+#import "XHSort.h"
 
 @interface XHHomeCVC ()
+//导航栏控件
+@property (weak, nonatomic)XHNaviItemView *sortItemView;
+@property (weak, nonatomic)XHNaviItemView *categoryItemView;
+
 //弹出控制器
 @property (nonatomic, strong) UIPopoverController *categoryPopover;
 @property (nonatomic, strong) UIPopoverController *districtPopover;
+@property (nonatomic, strong) UIPopoverController *sortPopover;
+
+
 @end
 
 @implementation XHHomeCVC
+
+-(UIPopoverController *)sortPopover{
+    if (!_sortPopover) {
+        XHSortViewController *sortViewController = [[XHSortViewController alloc] init];
+        self.sortPopover = [[UIPopoverController alloc] initWithContentViewController:sortViewController];
+    }
+    return _sortPopover;
+}
 
 -(UIPopoverController *)categoryPopover{
     if (!_categoryPopover) {
@@ -40,6 +57,7 @@
     //self.view.backgroundColor = [UIColor yellowColor];
     [self setupLeftNav];
     [self setupRightNav];
+    [self setUpListenEvent];
 }
 
 #pragma mark -- 设置导航栏
@@ -81,12 +99,12 @@
     
     
     //category
-    XHNaviItemView *categoryItemView = [XHNaviItemView item];
-    categoryItemView.title = @"全部分类";
-    categoryItemView.subtitle = @"全部";
-    [categoryItemView setIcon:@"icon_category_-1" highIcon:@"icon_category_highlighted_-1"];
-    [categoryItemView addTarget:self action:@selector(clickCategory)];
-    UIBarButtonItem *categoryItem = [[UIBarButtonItem alloc] initWithCustomView:categoryItemView];
+    self.categoryItemView = [XHNaviItemView item];
+    self.categoryItemView.title = @"全部分类";
+    self.categoryItemView.subtitle = @"全部";
+    [self.categoryItemView setIcon:@"icon_category_-1" highIcon:@"icon_category_highlighted_-1"];
+    [self.categoryItemView addTarget:self action:@selector(clickCategory)];
+    UIBarButtonItem *categoryItem = [[UIBarButtonItem alloc] initWithCustomView:self.categoryItemView];
     
     //place
     XHNaviItemView *districtItemView = [XHNaviItemView item];
@@ -97,11 +115,11 @@
     UIBarButtonItem *districtItem = [[UIBarButtonItem alloc] initWithCustomView:districtItemView];
     
     //sort
-    XHNaviItemView *sortItemView = [XHNaviItemView item];
-    sortItemView.title = @"排序";
-    sortItemView.subtitle = @"默认排序";
-    [sortItemView addTarget:self action:@selector(clickSort)];
-    UIBarButtonItem *sortItem = [[UIBarButtonItem alloc] initWithCustomView:sortItemView];
+    self.sortItemView = [XHNaviItemView item];
+    self.sortItemView.title = @"排序";
+    self.sortItemView.subtitle = @"默认排序";
+    [self.sortItemView addTarget:self action:@selector(clickSort)];
+    UIBarButtonItem *sortItem = [[UIBarButtonItem alloc] initWithCustomView:self.sortItemView];
     
     
     self.navigationItem.leftBarButtonItems = @[logoItem, categoryItem,districtItem,sortItem];
@@ -127,16 +145,39 @@
 }
 
 -(void)clickSort{
+    [self.sortPopover presentPopoverFromBarButtonItem:self.navigationItem.leftBarButtonItems[3] permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+#pragma mark -- 创建监听
+
+-(void)setUpListenEvent{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(categoryDidChange:) name:@"CategoryDidChange" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(regionDidChange:) name:@"RegionDidChange" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sortDidChange:) name:@"SortDidChange" object:nil];
 }
-*/
+
+#pragma mark -- 监听出发方法
+-(void)categoryDidChange:(NSNotification *)notification{
+    NSString *selectedCategory = notification.userInfo[@"categoryName"];
+    NSString *selectedSubCategory = notification.userInfo[@"subcategory"];
+    self.categoryItemView.title = selectedCategory;
+    self.categoryItemView.subtitle = selectedSubCategory;
+    [self.categoryPopover dismissPopoverAnimated:YES];
+}
+
+-(void)regionDidChange:(NSNotification *)notification{
+    
+    
+}
+
+-(void)sortDidChange:(NSNotification *)notification{
+    XHSort *selectedSort = notification.userInfo[@"XHSelectedSort"];
+    self.sortItemView.subtitle = selectedSort.label;
+    
+    [self.sortPopover dismissPopoverAnimated:YES];
+}
 
 @end

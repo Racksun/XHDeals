@@ -12,8 +12,11 @@
 //返回所有城市
 +(NSArray *)citys;
 
-//返回分组
+//返回分类组
 +(NSArray *)categories;
+
+//返回排序组
++(NSArray *)sorts;
 
 //返回城市组
 +(NSArray *)cityGroups;

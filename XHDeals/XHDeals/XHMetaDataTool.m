@@ -11,10 +11,33 @@
 #import "XHCity.h"
 #import "XHRegion.h"
 #import "XHCityGroup.h"
+#import "XHSort.h"
 
 
 @implementation XHMetaDataTool
-static dispatch_once_t once;
+
+
+//排序相关
+static NSArray *_sorts = nil;
++(NSArray *)sorts{
+    static dispatch_once_t onceSort;
+    dispatch_once(&onceSort, ^{
+        _sorts = [[self alloc] getAndParseSorts:@"sorts.plist"];
+    });
+    return [_sorts copy];
+}
+
+-(NSArray *)getAndParseSorts:(NSString *)fileName{
+    NSString *sortPath = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+    NSArray *dataArray = [NSArray arrayWithContentsOfFile:sortPath];
+    NSMutableArray *mutArray = [NSMutableArray new];
+    
+    for (NSDictionary *dataDic in dataArray) {
+        XHSort *sort = [XHSort parseSortData:dataDic];
+        [mutArray addObject:sort];
+    }
+    return [mutArray copy];
+}
 
 static NSArray *_cityGroups = nil;
 //城市分组相关
@@ -40,7 +63,7 @@ static NSArray *_cityGroups = nil;
 //城市相关
 static NSArray* _citys = nil;
 +(NSArray *)citys{
-    
+    static dispatch_once_t once;
     dispatch_once(&once, ^{
         _citys = [[self alloc] getAndParseCityFile:@"cities.plist"];
     });

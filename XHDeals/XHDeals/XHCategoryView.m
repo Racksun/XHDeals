@@ -55,7 +55,7 @@
         bg.image = [UIImage imageNamed:@"bg_dropdown_leftpart"];
         leftCell.backgroundView = bg;
         UIImageView *selectedBg = [[UIImageView alloc] init];
-        selectedBg.image = [UIImage imageNamed:@"bg_dropdown_leftpart_selected"];
+        selectedBg.image = [UIImage imageNamed:@"bg_dropdown_left_selected"];
         leftCell.selectedBackgroundView = selectedBg;
         
         CategoryModel *category = self.categoryArray[indexPath.row];
@@ -94,7 +94,7 @@
         rightCell.textLabel.text = subArray[indexPath.row];
         
         UIImageView *selectBG = [[UIImageView alloc] init];
-        selectBG.image = [UIImage imageNamed:@"bg_dropdown_leftpart_selected"];
+        selectBG.image = [UIImage imageNamed:@"bg_dropdown_left_selected"];
         rightCell.selectedBackgroundView = selectBG;
         return rightCell;
     }
@@ -105,8 +105,14 @@
     if (tableView == self.mainTableView) {
         [self.secondTableView reloadData];
     }else{
-//        NSIndexPath *mainSelectedIndex  = [self.mainTableView indexPathForSelectedRow];
-//        NSIndexPath *secondSelectedIndex = [self.secondTableView indexPathForSelectedRow];
+        NSIndexPath *mainSelectedIndex  = [self.mainTableView indexPathForSelectedRow];
+        NSIndexPath *secondSelectedIndex = [self.secondTableView indexPathForSelectedRow];
+        
+        CategoryModel *category = self.categoryArray[mainSelectedIndex.row];
+        NSString *subcategory = category.subcategories[secondSelectedIndex.row];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"CategoryDidChange" object:nil userInfo:@{@"categoryName" : category.name,@"subcategory" : subcategory}];
+        
     }
 }
 

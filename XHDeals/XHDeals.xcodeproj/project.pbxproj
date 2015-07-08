@@ -24,6 +24,8 @@
 		A380C5C51B4D078800F70ABA /* XHCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A380C5C31B4D078800F70ABA /* XHCityViewController.m */; };
 		A380C5C61B4D078800F70ABA /* XHCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A380C5C41B4D078800F70ABA /* XHCityViewController.xib */; };
 		A380C5C91B4D09C100F70ABA /* XHCityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A380C5C81B4D09C100F70ABA /* XHCityGroup.m */; };
+		A380C5CC1B4D440700F70ABA /* XHSort.m in Sources */ = {isa = PBXBuildFile; fileRef = A380C5CB1B4D440700F70ABA /* XHSort.m */; };
+		A380C5CF1B4D483C00F70ABA /* XHSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A380C5CE1B4D483C00F70ABA /* XHSortViewController.m */; };
 		A3E6ACFC1B4B8BB500D5C5A5 /* XHNaviItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6ACFB1B4B8BB500D5C5A5 /* XHNaviItemView.m */; };
 		A3E6ACFE1B4B8C3400D5C5A5 /* XHNaviItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3E6ACFD1B4B8C3400D5C5A5 /* XHNaviItemView.xib */; };
 		A3E6AD011B4BCE6700D5C5A5 /* XHCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E6AD001B4BCE6700D5C5A5 /* XHCategoryView.m */; };
@@ -80,6 +82,10 @@
 		A380C5C41B4D078800F70ABA /* XHCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XHCityViewController.xib; sourceTree = "<group>"; };
 		A380C5C71B4D09C100F70ABA /* XHCityGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCityGroup.h; sourceTree = "<group>"; };
 		A380C5C81B4D09C100F70ABA /* XHCityGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCityGroup.m; sourceTree = "<group>"; };
+		A380C5CA1B4D440700F70ABA /* XHSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSort.h; sourceTree = "<group>"; };
+		A380C5CB1B4D440700F70ABA /* XHSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSort.m; sourceTree = "<group>"; };
+		A380C5CD1B4D483C00F70ABA /* XHSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSortViewController.h; sourceTree = "<group>"; };
+		A380C5CE1B4D483C00F70ABA /* XHSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSortViewController.m; sourceTree = "<group>"; };
 		A3E6ACFA1B4B8BB500D5C5A5 /* XHNaviItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNaviItemView.h; sourceTree = "<group>"; };
 		A3E6ACFB1B4B8BB500D5C5A5 /* XHNaviItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNaviItemView.m; sourceTree = "<group>"; };
 		A3E6ACFD1B4B8C3400D5C5A5 /* XHNaviItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XHNaviItemView.xib; sourceTree = "<group>"; };
@@ -229,6 +235,8 @@
 				A380C5C21B4D078800F70ABA /* XHCityViewController.h */,
 				A380C5C31B4D078800F70ABA /* XHCityViewController.m */,
 				A380C5C41B4D078800F70ABA /* XHCityViewController.xib */,
+				A380C5CD1B4D483C00F70ABA /* XHSortViewController.h */,
+				A380C5CE1B4D483C00F70ABA /* XHSortViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -262,6 +270,8 @@
 				A380C5BD1B4CEE1A00F70ABA /* XHRegion.m */,
 				A380C5C71B4D09C100F70ABA /* XHCityGroup.h */,
 				A380C5C81B4D09C100F70ABA /* XHCityGroup.m */,
+				A380C5CA1B4D440700F70ABA /* XHSort.h */,
+				A380C5CB1B4D440700F70ABA /* XHSort.m */,
 			);
 			name = Modle;
 			sourceTree = "<group>";
@@ -450,10 +460,12 @@
 				A3E6AD121B4BF65E00D5C5A5 /* NSObject+XHDataParseTool.m in Sources */,
 				A35E2B1F1B4AA1140064E96C /* AppDelegate.m in Sources */,
 				A35E2B511B4AAC7E0064E96C /* XHHomeCVC.m in Sources */,
+				A380C5CC1B4D440700F70ABA /* XHSort.m in Sources */,
 				A35E2B1C1B4AA1140064E96C /* main.m in Sources */,
 				A380C5B71B4CA9CE00F70ABA /* XHRegionViewController.m in Sources */,
 				A35E2B421B4AA5830064E96C /* NaviC.m in Sources */,
 				A380C5C91B4D09C100F70ABA /* XHCityGroup.m in Sources */,
+				A380C5CF1B4D483C00F70ABA /* XHSortViewController.m in Sources */,
 				A380C5BB1B4CBCCB00F70ABA /* XHCity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
